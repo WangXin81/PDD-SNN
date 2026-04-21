@@ -5,6 +5,16 @@
 ## 项目概述
 PDD-SNN 是一个基于脉冲神经网络（SNN）的水下图像恢复研究代码仓库。当前版本已经将原先按数据集分散复制的多套脚本收敛为一套主代码，并通过不同实验配置切换训练流程。
 
+## 总体框架图
+PDD-SNN 的整体框架如下图所示。
+
+![总体框架图](assets/figures/framework.png)
+
+PDD-SNN 主要由三个协同模块组成：
+- `UPM`（Underwater Physical Modeling）：基于水下物理先验构建退化感知训练样本。
+- `SFDF`（Spatial-Frequency Dual-Branch Feature Extraction）：联合提取空间细节与频域表征。
+- `FFSR`（Feature Fusion and Super-Resolution Reconstruction）：融合多尺度脉冲特征并重建最终高分辨率输出。
+
 ## 主要特性
 - 统一的训练入口，同时支持联合退化+重建训练和纯监督重建训练
 - 统一的推理与评估脚本

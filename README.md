@@ -5,6 +5,16 @@
 ## Project Overview
 PDD-SNN is a cleaned-up research codebase for underwater image restoration with spiking neural networks (SNNs). The project now exposes a single codebase with multiple experiment configs instead of maintaining separate duplicated copies for each dataset.
 
+## Overall Framework
+The overall architecture of PDD-SNN is illustrated below.
+
+![Overall Framework](assets/figures/framework.png)
+
+PDD-SNN mainly consists of three cooperating modules:
+- `UPM` (Underwater Physical Modeling): builds degradation-aware training samples using underwater physical priors.
+- `SFDF` (Spatial-Frequency Dual-Branch Feature Extraction): jointly extracts spatial details and frequency-domain representations.
+- `FFSR` (Feature Fusion and Super-Resolution Reconstruction): fuses multi-scale spiking features and reconstructs the final high-resolution output.
+
 ## Features
 - Unified training entrypoint for joint degradation + reconstruction and supervised reconstruction-only workflows
 - Unified inference and evaluation scripts
