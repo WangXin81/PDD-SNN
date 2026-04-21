@@ -1,0 +1,11 @@
+numpy<2
+scipy
+pandas
+Pillow
+tqdm
+opencv-python
+scikit-image
+lpips
+spikingjelly
+piq
+thop
